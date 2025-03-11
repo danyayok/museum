@@ -1,0 +1,69 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <title>Музей - О нас</title>
+</head>
+<body style="background-image: url('{% static 'images/close.jpeg' %}'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <h2>Военно-исторический музей</h2>
+                <h2 class="museum-description">МАОУ "Школа №30" имени Кравцова О. Т.</h2>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="/">О НАС</a></li>
+                    <li><a href="/excursions">ЭКСКУРСИИ</a></li>
+                    <li><a href="/docs">ДОКУМЕНТЫ</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <section id="excursions">
+            <div class="excursion-text">
+                <h2>Наши экскурсии</h2>
+                <p>Группа экскурсоводов работает непосредственно в помещении музея, где знакомят учащихся с историей и фактами, запечатленными на стендах музея:</p>
+                <ul>
+                    <li>«Боевой путь 87-й стрелковой дивизии»</li>
+                    <li>«Маршалы победы»</li>
+                    <li>«Битва за Перекоп»</li>
+                    <li>«Боевой путь 56-й армии»</li>
+                    <li>«Самбекские высоты»</li>
+                    <li>«Ростовская освободительная операция»</li>
+                </ul>
+                <p>Кроме этого экскурсоводы участвуют в районных и городских соревнованиях «Юный экскурсовод», занимая почетные призовые места.</p>
+                <p>Таким образом, музей как центр воспитания подрастающего поколения является важным элементом воспитательной работы образовательного учреждения. Через музей осуществляется связь ныне живущих поколений с нашим прошлым, с нашей историей.</p>
+            </div>
+            <div class="excursion-images">
+                    <img src="{% static 'images/ammo.jpeg' %}" alt="Музей">
+                    <img src="{% static 'images/bags.jpeg' %}" alt="Музей">
+            </div>
+        </section>
+        <footer id="contacts">
+            <div class="contact-info">
+                <div class="text-section">
+                    <h3>Контактная информация</h3>
+                    <p><strong>Адрес:</strong> Ростов-на-Дону, бул. Комарова, д. 28/3</p>
+                    <p><strong>Руководитель музея:</strong> Попова Г.Н.</p>
+                    <p><strong>Телефон:</strong> <a href="tel:+79618302130">8 (961) 830-21-30</a></p>
+                    <p><strong>Эл. почта:</strong> <a href="mailto:sovetnik.30@yandex.ru">sovetnik.30@yandex.ru</a></p>
+                </div>
+                <div class="map-section">
+                    <iframe
+                        src="https://yandex.ru/map-widget/v1/?ll=39.709154%2C47.291360&z=17"
+                        width="100%"
+                        height="300"
+                        frameborder="0"
+                        style="border:0;"
+                        allowfullscreen
+                    ></iframe>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

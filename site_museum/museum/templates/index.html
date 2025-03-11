@@ -1,0 +1,80 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <title>Музей</title>
+</head>
+<body style="background-image: url('{% static 'images/close.jpeg' %}'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <h2>Военно-исторический музей</h2>
+                <h2 class="museum-description">МАОУ "Школа №30" имени Кравцова О. Т.</h2>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="/">О НАС</a></li>
+                    <li><a href="/excursions">ЭКСКУРСИИ</a></li>
+                    <li><a href="/docs">ДОКУМЕНТЫ</a></li>
+
+                </ul>
+            </nav>
+        </header>
+        <section id="about">
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="{% static 'images/ammo.jpeg' %}" alt="Музей">
+                    <img src="{% static 'images/bags.jpeg' %}" alt="Музей">
+                </div>
+                <div class="about-text">
+                    <h2>Военно-исторический музей "87-й Перекопской Краснознамённой стрелковой дивизии 51 Армии"</h2>
+                    <p>Добро пожаловать на сайт школьного музея. Школьный музей был создан в 1990 году. Историю своего края нужно изучать, чтобы понять его настоящее.</p>
+                    <p>За годы существования сама музейная экспозиция претерпела некоторые изменения. Первоначально музей назывался - «Музей боевой славы» МОУ СОШ №30.</p>
+                    <p>В 2002 году пополнился экспонатами по истории 87-й стрелковой Краснознаменной Перекопской дивизии. Получено свидетельство о наименовании музея - «Музей 87-й стрелковой Краснознаменной Перекопской дивизии». </p>
+                    <p>В 2004 году музей получил звание "Школьный музей"</p>
+                    <a href="/excursions" class="read-more">Читать далее...</a>
+                </div>
+            </div>
+        </section>
+        <div id="balka"></div>
+        <h1> Новости музея </h1>
+        <section id="news">
+            {% for item in news %}
+                <div class="news-item">
+                    <h3>{{ item.title }}</h3>
+                    <p class="news-date">{{ item.date }}</p>
+                    {% if item.image %}
+                        <img src="{{ item.image.url }}" alt="{{ item.title }}" class="news-image">
+                    {% endif %}
+                    <p>{{ item.content }}</p>
+                </div>
+            {% endfor %}
+        </section>
+
+        <footer id="contacts">
+            <div class="contact-info">
+                <div class="text-section">
+                    <h3>Контактная информация</h3>
+                    <p><strong>Адрес:</strong> Ростов-на-Дону, бул. Комарова, д. 28/3</p>
+                    <p><strong>Руководитель музея:</strong> Попова Г.Н.</p>
+                    <p><strong>Телефон:</strong> <a href="tel:+79618302130">8 (961) 830-21-30</a></p>
+                    <p><strong>Эл. почта:</strong> <a href="mailto:sovetnik.30@yandex.ru">sovetnik.30@yandex.ru</a></p>
+                </div>
+                <div class="map-section">
+                    <iframe
+                        src="https://yandex.ru/map-widget/v1/?ll=39.709154%2C47.291360&z=17"
+                        width="100%"
+                        height="300"
+                        frameborder="0"
+                        style="border:0;"
+                        allowfullscreen
+                    ></iframe>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
